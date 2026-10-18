@@ -1,0 +1,45 @@
+{
+  "created": "2026-10-01T11:49:41",
+  "source_checkpoint": "C:\\Users\\14981\\Documents\\Codex\\2026-08-26\\bian-ch\\tgunet_shared_moe\\results\\layer4_joint_20260926\\epoch_02.pth",
+  "source_sha256": "f6c3688d80e8af25c4b21529b3451e177f3baabb8e92a3a83c345295aa4f904d",
+  "source_description": "best existing lightweight checkpoint: shared encoder plus e3/e4 selectors and heads, after Layer4 joint epoch 2",
+  "base_checkpoint": "C:\\Users\\14981\\Documents\\Codex\\2026-08-26\\bian-ch\\tgunet_shared_moe\\results\\head_joint_e3_e4_20260925\\best.pth",
+  "base_sha256": "d7e9827ec498c50bf9ad224ede00f8d724add5889162388fa06bc55fe388aadb",
+  "architectures": [
+    "shared",
+    "e4",
+    "e3e4"
+  ],
+  "split_definition": {
+    "shared": "encoder e0-e4 shared; expert selectors/heads",
+    "e4": "e0-e3 shared; e4 branch-specific",
+    "e3e4": "e0-e2 shared; e3/e4 branch-specific"
+  },
+  "input_size": 384,
+  "route": "fixed historical text and General predicted-area rule",
+  "mask_threshold": 0.5,
+  "presence_gate": "not included in training evaluator; fixed General path retained",
+  "loss": "BCE plus Dice, unweighted",
+  "epochs": 2,
+  "train_samples_per_epoch": 1200,
+  "batch_size": 2,
+  "seed": 20261001,
+  "branch_lr": 1e-05,
+  "selector_lr": 1e-05,
+  "head_lr": 2e-06,
+  "dev_indices_sha256": "415c8987a509ba62770a1717744be77051dabc986536f662029d4cf56925497f",
+  "dev_references": 1200,
+  "smoke_test": false,
+  "train_pool_references": 39044,
+  "split_audit": {
+    "dev_images": 160,
+    "holdout_images": 160,
+    "excluded_images": 320,
+    "train_refs_before": 45000,
+    "train_refs_after": 43710,
+    "train_val_source_image_overlap_total": 5609
+  },
+  "historical_checkpoint_exposure": "possible; this is development evidence, not a blind generalization test",
+  "test_sets_read": false,
+  "deployment_changed": false
+}
