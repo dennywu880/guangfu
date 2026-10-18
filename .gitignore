@@ -1,0 +1,11 @@
+datasets/
+text_cache/
+pretrained_cache/
+runtime_data/
+ui_outputs/
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+*.partial
+*.lock
