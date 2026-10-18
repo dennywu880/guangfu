@@ -1,0 +1,116 @@
+{
+  "checkpoint": "C:\\Users\\14981\\Documents\\Codex\\2026-08-26\\bian-ch\\tgunet_shared_moe\\results\\decoder_sharing_from_shared_encoder_20261008\\private_epoch_02.pth",
+  "checkpoint_sha256": "b1428aa8fd98ca1de915f90bf84d0a9340a09d0276477748e66cf042dbb72352",
+  "m2segnet_style_metrics": {
+    "cIoU": 0.709545787142393,
+    "gIoU": 0.6122406822221694,
+    "Recall": 0.8188976202749096,
+    "Precision": 0.8416102574517849,
+    "F1": 0.8300986056985825,
+    "Pr@0.1": 0.8878571428571429,
+    "Pr@0.2": 0.8591428571428571,
+    "Pr@0.3": 0.8168571428571428,
+    "Pr@0.4": 0.7581428571428571,
+    "Pr@0.5": 0.6844285714285714,
+    "Pr@0.6": 0.5927142857142857,
+    "Pr@0.7": 0.475,
+    "Pr@0.8": 0.3181428571428571,
+    "Pr@0.9": 0.199,
+    "mPr": 0.6212539682539683
+  },
+  "pixel_counts": {
+    "TP": 33490691,
+    "FP": 6302896,
+    "FN": 7406596,
+    "intersection_sum": 33490691,
+    "union_sum": 47200183
+  },
+  "system": {
+    "N": 7000,
+    "positive_N": 5834,
+    "no_target_N": 1166,
+    "positive_mean_dice": 0.657782570552059,
+    "positive_dice_ge_0_8": 0.4367500857044909,
+    "positive_dice_lt_0_5": 0.2271169009256085,
+    "no_target_accuracy": 0.9253859348198971,
+    "full_all_sample_dice": 0.7023576452286733
+  },
+  "presence_gate": {
+    "positive_survival": 0.9981145011998629,
+    "false_reject_positive_rate": 0.0018854988001371087,
+    "no_target_recall": 0.9219554030874786
+  },
+  "by_true_size": {
+    "ultra_tiny": {
+      "N": 315,
+      "mean_dice": 0.3796143176566061,
+      "positive_mean_iou": 0.29935971148454515,
+      "positive_cIoU": 0.26081458804738455,
+      "Recall": 0.5067563199068985,
+      "Precision": 0.34955179949159343,
+      "F1": 0.4137239377144365
+    },
+    "tiny": {
+      "N": 1758,
+      "mean_dice": 0.5957097347958678,
+      "positive_mean_iou": 0.4890255682809531,
+      "positive_cIoU": 0.4317442705578277,
+      "Recall": 0.6230540460698619,
+      "Precision": 0.5843890796903196,
+      "F1": 0.6031024945392156
+    },
+    "larger": {
+      "N": 3761,
+      "mean_dice": 0.7100949994064732,
+      "positive_mean_iou": 0.5989575956925388,
+      "positive_cIoU": 0.7268496196164296,
+      "Recall": 0.8230771863312347,
+      "Precision": 0.8614395790983796,
+      "F1": 0.8418215591672407
+    }
+  },
+  "by_route": {
+    "ultra_tiny": {
+      "positive_N": 1174,
+      "positive_mean_dice": 0.43735080743204474,
+      "no_target_N": 557,
+      "no_target_accuracy": 0.9587073608617595
+    },
+    "tiny": {
+      "positive_N": 2728,
+      "positive_mean_dice": 0.6684500359112552,
+      "no_target_N": 86,
+      "no_target_accuracy": 0.5348837209302325
+    },
+    "larger": {
+      "positive_N": 1932,
+      "positive_mean_dice": 0.776667686702685,
+      "no_target_N": 523,
+      "no_target_accuracy": 0.9541108986615678
+    }
+  },
+  "compute": {
+    "general_plus_one_routed_expert_flops_per_image": 71069100496,
+    "measurement": "PyTorch profiler supported-operator FLOP estimate for one 384x384 image; excludes BERT transformer, Presence Gate, GUI and unsupported operators"
+  },
+  "runtime": {
+    "shared_general_gate_router_pass_seconds": 801.7842585000035,
+    "expert_path_pass_seconds": 96.39780099962081,
+    "combined_evaluation_pipeline_seconds": 898.1820594996243,
+    "combined_seconds_per_reference": 0.1283117227856606,
+    "references_reaching_expert_path": 5914,
+    "timing_scope": "Dataset loading, cached text-feature lookup, General/Gate/Router pass, routed expert pass; excludes GUI rendering and BERT transformer execution because formal cached text features were used"
+  },
+  "resources": {
+    "image_model_total_parameters_excluding_external_text_encoder": 38022602,
+    "text_encoder_parameters_counted_once": 109482240,
+    "combined_image_plus_text_encoder_parameters": 147504842,
+    "active_one_route_image_parameters_excluding_external_text_encoder": 29481348,
+    "active_one_route_plus_text_encoder_parameters": 138963588,
+    "external_text_encoder_counted_once": true,
+    "checkpoint_file_bytes_incremental_not_self_contained": 51365273,
+    "device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "peak_cuda_memory_allocated_bytes": 772073984,
+    "peak_cuda_memory_reserved_bytes": 973078528
+  }
+}
