@@ -1,0 +1,17 @@
+{
+  "dataset": "Ref-EL-Defect TestB",
+  "references": 7000,
+  "input_size": 384,
+  "general_mask_threshold": 0.5,
+  "expert_mask_threshold": 0.5,
+  "presence_gate_threshold": 0.9100000000000004,
+  "router_ultra_tiny": 0.00255,
+  "router_tiny_larger": 0.01629,
+  "gate_checkpoint": "C:\\Users\\14981\\Documents\\Codex\\2026-08-26\\bian-ch\\tgunet_shared_moe\\checkpoints\\presence_gate_v2_best.pth",
+  "gate_checkpoint_sha256": "80662cca65fc36b9078ab9c06a94c2a9a10f2971a9372a63ac6a8f147d9b49c2",
+  "protocol": "Frozen step-43 General + Presence Gate v2 + text/area routing; decoder candidate only varies expert path",
+  "historical_testB_exposure": "TestB has prior project use; this is a frozen re-evaluation, not an untouched blind test",
+  "threshold_or_model_tuning_on_testB": false,
+  "device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "shared_general_gate_router_pass_seconds": 801.7842585000035
+}
